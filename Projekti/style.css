@@ -1,0 +1,233 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #faf7f2;
+    color: #3d3029;
+}
+
+h1, h2 {
+    font-family: Georgia, serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background-color: white;
+}
+
+header span, .home span, .welcome {
+    color: #ac795a;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a, .footer-links a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav a:hover, .footer-links a:hover {
+    color: #ac795a;
+}
+
+
+.home {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 80px 8%;
+    background-color: #f1e6d8;
+}
+
+.home-text {
+    width: 50%;
+}
+
+.home h1 {
+    font-size: 48px;
+}
+
+.home p {
+    line-height: 1.8;
+}
+
+.home img {
+    width: 45%;
+    border-radius: 10px;
+}
+
+.button, .book-button, form button {
+    display: inline-block;
+    background-color: #3d3029;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover, form button:hover {
+    background-color: #ac795a;
+}
+
+
+.page {
+    padding: 60px 8%;
+    text-align: center;
+    min-height: 60vh;
+}
+
+.page > p {
+    margin-bottom: 35px;
+}
+
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.book-card, .category-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.category-card {
+    text-decoration: none;
+    color: #3d3029;
+}
+
+.book-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: contain;
+}
+
+.price {
+    color: #ac795a;
+    font-weight: bold;
+}
+
+.book-card:hover, .category-card:hover {
+    background-color: #f1e6d8;
+}
+
+.about-box, .contact-box {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    text-align: left;
+}
+
+.about-box img {
+    width: 45%;
+    border-radius: 10px;
+}
+
+.about-text, .contact-info, form {
+    flex: 1;
+}
+
+.about-text p {
+    line-height: 1.8;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+form input, form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+}
+
+form input:focus, form textarea:focus {
+    outline: 2px solid #ac795a;
+}
+
+
+footer {
+    background-color: #3d3029;
+    color: white;
+    padding: 40px 8% 15px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: 40px;
+}
+
+.footer-about span {
+    color: #ac795a;
+}
+
+.footer-links a {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid #66564d;
+    margin-top: 30px;
+    padding-top: 15px;
+}
+
+@media (max-width: 768px) {
+
+    header, .home, .about-box, .contact-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .home-text, .home img, .about-box img {
+        width: 100%;
+    }
+
+    .home h1 {
+        font-size: 34px;
+    }
+
+    .book-grid, .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .book-grid, .category-grid {
+        grid-template-columns: 1fr;
+    }
+}
