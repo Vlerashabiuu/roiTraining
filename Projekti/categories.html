@@ -5,8 +5,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BookNest - Categories</title>
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            color: #3d3029;
+            background: #faf7f2;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 8%;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            transition: color 0.5s;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        a:hover, span {
+            color: #ac795a;
+        }
+
+        main {
+            text-align: center;
+            padding: 60px 8%;
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        .card:hover {
+            background: #f1e6d8;
+        }
+
+        footer {
+            background: #3d3029;
+            color: white;
+            padding: 30px 8%;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1.5fr;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #66564d;
+            padding-top: 15px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .categories, .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
     <header>
@@ -20,28 +114,28 @@
         </nav>
     </header>
 
-    <main class="page">
+    <main>
         <h1>Book Categories</h1>
         <p>Choose your favorite type of book.</p>
 
-        <div class="category-grid">
+        <div class="categories">
 
-            <a href="books.html#fiction" class="category-card">
+            <a href="books.html#fiction" class="card">
                 <h2>Fiction</h2>
                 <p>Explore wonderful stories.</p>
             </a>
 
-            <a href="books.html#romance" class="category-card">
+            <a href="books.html#romance" class="card">
                 <h2>Romance</h2>
                 <p>Discover beautiful love stories.</p>
             </a>
 
-            <a href="books.html#mystery" class="category-card">
+            <a href="books.html#mystery" class="card">
                 <h2>Mystery</h2>
                 <p>Enjoy exciting mysteries.</p>
             </a>
 
-            <a href="books.html#development" class="category-card">
+            <a href="books.html#development" class="card">
                 <h2>Self-Development</h2>
                 <p>Learn something new every day.</p>
             </a>
@@ -51,30 +145,23 @@
 
     <footer>
         <div class="footer-content">
-
-            <div class="footer-about">
+            <div>
                 <h2>Book<span>Nest.</span></h2>
                 <p>Your next favorite story starts here.</p>
             </div>
-
             <div class="footer-links">
                 <h3>Quick Links</h3>
                 <a href="index.html">Home</a>
                 <a href="books.html">Books</a>
-                <a href="categories.html">Categories</a>
                 <a href="about.html">About Us</a>
             </div>
-
-            <div class="footer-contact">
+            <div>
                 <h3>Contact Us</h3>
-                <p>Email: hello@booknest.example</p>
-                <p>Location: Kosovo</p>
+                <p>hello@booknest.example</p>
+                <p>Kosovo</p>
             </div>
         </div>
-
-        <div class="copyright">
-            <p>© 2026 BookNest. All rights reserved.</p>
-        </div>
+        <p class="copyright">© 2026 BookNest. All rights reserved.</p>
     </footer>
 
 </body>

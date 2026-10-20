@@ -5,12 +5,145 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BookNest - Books</title>
-    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Arial;
+            color: #3d3029;
+            background: #faf7f2;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 8%;
+            background: white;
+        }
+
+        header h2 {
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #3d3029;
+            text-decoration: none;
+            transition: color 0.5s;
+        }
+
+        nav a:hover, header span, footer span {
+            color: #ac795a;
+        }
+
+        main {
+            text-align: center;
+            padding: 50px 8%;
+        }
+
+        .books {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .card img {
+            height: 220px;
+            object-fit: contain;
+            padding: 15px;
+        }
+
+        .card {
+            transition: background-color 0.5s, transform 0.5s;
+        }
+
+        .card:hover {
+            background: #f1e6d8;
+            transform: translateY(-5px);
+        }
+
+        .btn {
+            transition: 0.5s;
+        }
+
+        .btn:hover {
+            background-color: #ac795a;
+        }
+
+        .price {
+            color: #ac795a;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #3d3029;
+            color: white;
+            padding: 30px 8%;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1.5fr;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+        .footer-links a:hover {
+            color: #ac795a;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #66564d;
+            margin-top: 30px;
+            padding-top: 15px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .books {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .books {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
     <header>
         <h2>Book<span>Nest.</span></h2>
+
         <nav>
             <a href="index.html">Home</a>
             <a href="books.html">Books</a>
@@ -20,46 +153,63 @@
         </nav>
     </header>
 
-    <main class="page">
+
+    <main>
         <h1>Our Books</h1>
         <p>Discover your next favorite book!</p>
 
-        <div class="book-grid">
+        <div class="books">
 
-            <article class="book-card" id="romance">
+            <article class="card" id="romance">
                 <img src="https://covers.openlibrary.org/b/isbn/9780141439518-L.jpg"
-                     alt="Pride and Prejudice">
-                <h3>Pride and Prejudice</h3>
-                <p>Jane Austen</p>
-                <p class="price">€12.90</p>
-                <span class="book-button">View Book</span>
+                     class="card-img-top" alt="Pride and Prejudice">
+
+                <div class="card-body">
+                    <h5 class="card-title">Pride and Prejudice</h5>
+                    <p class="card-text">Jane Austen</p>
+                    <p class="price">€12.90</p>
+                    <a href="https://openlibrary.org/isbn/9780141439518"
+                       class="btn btn-dark">View Book</a>
+                </div>
             </article>
 
-            <article class="book-card" id="fiction">
+            <article class="card" id="fiction">
                 <img src="https://covers.openlibrary.org/b/isbn/9780743273565-L.jpg"
-                     alt="The Great Gatsby">
-                <h3>The Great Gatsby</h3>
-                <p>F. Scott Fitzgerald</p>
-                <p class="price">€11.50</p>
-                <span class="book-button">View Book</span>
+                     class="card-img-top" alt="The Great Gatsby">
+
+                <div class="card-body">
+                    <h5 class="card-title">The Great Gatsby</h5>
+                    <p class="card-text">F. Scott Fitzgerald</p>
+                    <p class="price">€11.50</p>
+                    <a href="https://openlibrary.org/isbn/9780743273565"
+                       class="btn btn-dark">View Book</a>
+                </div>
             </article>
 
-            <article class="book-card" id="mystery">
+            <article class="card" id="mystery">
                 <img src="https://covers.openlibrary.org/b/isbn/9780140439083-L.jpg"
-                     alt="Sherlock Holmes">
-                <h3>Sherlock Holmes</h3>
-                <p>Arthur Conan Doyle</p>
-                <p class="price">€14.00</p>
-                <span class="book-button">View Book</span>
+                     class="card-img-top" alt="Sherlock Holmes">
+
+                <div class="card-body">
+                    <h5 class="card-title">Sherlock Holmes</h5>
+                    <p class="card-text">Arthur Conan Doyle</p>
+                    <p class="price">€14.00</p>
+                    <a href="https://openlibrary.org/isbn/9780140439083"
+                       class="btn btn-dark">View Book</a>
+                </div>
             </article>
 
-            <article class="book-card" id="development">
+            <article class="card" id="development">
                 <img src="https://covers.openlibrary.org/b/isbn/9780735211292-L.jpg"
-                     alt="Atomic Habits">
-                <h3>Atomic Habits</h3>
-                <p>James Clear</p>
-                <p class="price">€16.90</p>
-                <span class="book-button">View Book</span>
+                     class="card-img-top" alt="Atomic Habits">
+
+                <div class="card-body">
+                    <h5 class="card-title">Atomic Habits</h5>
+                    <p class="card-text">James Clear</p>
+                    <p class="price">€16.90</p>
+                    <a href="https://openlibrary.org/isbn/9780735211292"
+                       class="btn btn-dark">View Book</a>
+                </div>
             </article>
 
         </div>
@@ -68,7 +218,7 @@
     <footer>
         <div class="footer-content">
 
-            <div class="footer-about">
+            <div>
                 <h2>Book<span>Nest.</span></h2>
                 <p>Your next favorite story starts here.</p>
             </div>
@@ -77,20 +227,20 @@
                 <h3>Quick Links</h3>
                 <a href="index.html">Home</a>
                 <a href="books.html">Books</a>
-                <a href="categories.html">Categories</a>
                 <a href="about.html">About Us</a>
             </div>
 
-            <div class="footer-contact">
+            <div>
                 <h3>Contact Us</h3>
-                <p>Email: hello@booknest.example</p>
-                <p>Location: Kosovo</p>
+                <p>hello@booknest.example</p>
+                <p>Kosovo</p>
             </div>
+
         </div>
 
-        <div class="copyright">
-            <p>© 2026 BookNest. All rights reserved.</p>
-        </div>
+        <p class="copyright">
+            © 2026 BookNest. All rights reserved.
+        </p>
     </footer>
 
 </body>

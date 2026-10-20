@@ -5,8 +5,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BookNest - About Us</title>
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            color: #3d3029;
+            background: #faf7f2;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 8%;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            transition: color 0.5s;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        a:hover, span {
+            color: #ac795a;
+        }
+
+        main {
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .about {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .about img {
+            width: 45%;
+            border-radius: 10px;
+        }
+
+        .about div {
+            flex: 1;
+            line-height: 1.8;
+        }
+
+        footer {
+            background: #3d3029;
+            color: white;
+            padding: 30px 8%;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1.5fr;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #66564d;
+            padding-top: 15px;
+        }
+
+        @media (max-width: 768px) {
+            header, .about {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .about img {
+                width: 100%;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
     <header>
@@ -20,65 +120,43 @@
         </nav>
     </header>
 
-
-    <main class="page">
+    <main>
         <h1>About BookNest</h1>
         <p>Get to know our bookstore.</p>
 
-        <section class="about-box">
-
+        <section class="about">
             <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=800"
-                 alt="Beautiful library">
+                 alt="Library">
 
-            <div class="about-text">
+            <div>
                 <h2>Our Story</h2>
-
-                <p>
-                    Welcome to BookNest, your cozy online
-                    bookstore. We believe every book has
-                    a special story to tell.
-                </p>
-
-                <p>
-                    Our mission is to help people discover
-                    wonderful books and enjoy reading.
-                </p>
-
-                <p>
-                    At BookNest, every reader can find
-                    something special.
-                </p>
+                <p>Welcome to BookNest, your cozy online
+                   bookstore. Every book has a special story.</p>
+                <p>Our mission is to help people discover
+                   wonderful books and enjoy reading.</p>
             </div>
-
         </section>
     </main>
 
     <footer>
         <div class="footer-content">
-
-            <div class="footer-about">
+            <div>
                 <h2>Book<span>Nest.</span></h2>
                 <p>Your next favorite story starts here.</p>
             </div>
-
             <div class="footer-links">
                 <h3>Quick Links</h3>
                 <a href="index.html">Home</a>
                 <a href="books.html">Books</a>
-                <a href="categories.html">Categories</a>
                 <a href="about.html">About Us</a>
             </div>
-
-            <div class="footer-contact">
+            <div>
                 <h3>Contact Us</h3>
-                <p>Email: hello@booknest.example</p>
-                <p>Location: Kosovo</p>
+                <p>hello@booknest.example</p>
+                <p>Kosovo</p>
             </div>
         </div>
-
-        <div class="copyright">
-            <p>© 2026 BookNest. All rights reserved.</p>
-        </div>
+        <p class="copyright">© 2026 BookNest. All rights reserved.</p>
     </footer>
 
 </body>
